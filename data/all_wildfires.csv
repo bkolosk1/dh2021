@@ -1,0 +1,8 @@
+name, country, lat, lon, affected_area,date_start, date_end, cause, link, deaths, evacuated, environment
+Camp fire,US,39.810278,-121.437222,62053,2018-11-8,2018-11-25,Electrical transmission fire from a PG&E power line[7],https://en.wikipedia.org/wiki/Camp_Fire_(2018), 85, 52000, major-schools closed
+Woolsey fire,US,34.235,-118.7013,39234,2018-11-8,2018-11-21,faulty equipment,https://en.wikipedia.org/wiki/Woolsey_Fire,3,30000,"major, 1600 houses destroyed"
+Lodgepole Complex Fire,US,47.318,-107.758,110000,2017-07-18,2017-07-21,lightning,https://en.wikipedia.org/wiki/Lodgepole_Complex_Fire,0,25000,6million dollar cost
+Nelson fires,NL,-41.37,173,24000,2019-02-05,2019-03-06,machinery spark,https://en.wikipedia.org/wiki/2019_Nelson_fires,0,1500,
+Carr Fire,US,40.6543,-122.6236,92936,2018-07-23,2019-01-04,faulty equipment,https://en.wikipedia.org/wiki/Carr_Fire,10,38000,"1600 building destroyed, huge air pollution"
+Mendoncino Complex Fire,US,39.243283,-123.103367,185,2018-07-28,2019-01-04,faulty equipment,https://en.wikipedia.org/wiki/Mendocino_Complex_Fire,2,30,animals died
+Attica Wildfires,GR,38.0525,23.868333,45023,2018-07-23,2018-07-26,human,https://en.wikipedia.org/wiki/2018_Attica_wildfires,102,n/a,more than 1000 buildings destroyed
