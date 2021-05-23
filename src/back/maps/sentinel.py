@@ -11,17 +11,14 @@ from sentinelhub.geo_utils import bbox_to_dimensions
 from oauthlib.oauth2 import BackendApplicationClient
 import imageio
 
-INSTANCE_ID = '71fdb1b7-224a-467f-a376-1f0f4bc67bcd'  # In case you put instance ID into configuration file you can leave this unchanged
+INSTANCE_ID = ''  # In case you put instance ID into configuration file you can leave this unchanged
 
 if INSTANCE_ID:
     config = SHConfig(
-        # instance_id = INSTANCE_ID,
-        # sh_client_id = '59048875-e4cf-4063-8c57-8970fafc316a',
-        # sh_client_secret = 'O?pr{qu@6c&F5X#95(V[XK8efb[BSc9/77QN4GAI'
     )
     config.instance_id = INSTANCE_ID
-    config.sh_client_id = '59048875-e4cf-4063-8c57-8970fafc316a'
-    config.sh_client_secret = 'O?pr{qu@6c&F5X#95(V[XK8efb[BSc9/77QN4GAI'
+    config.sh_client_id = ''
+    config.sh_client_secret = ''
 else:
     config = None
 
@@ -206,16 +203,6 @@ def parse_input_data():
     return output_data
 
 
-# for site in parse_input_data()[1:]:
-#     spill, location, dat, lat, lon = site
-#     bb = get_bounding_box(lat, lon, 1)
-#     interval_from = datetime.strptime(dat, '%Y-%m-%d') - timedelta(days=30)
-#     interval_to = datetime.strptime(dat, '%Y-%m-%d') + timedelta(days=30)
-#     available_dates = get_available_dates(bb, (interval_from, interval_to))
-#     for dat in available_dates:
-#         image = get_image_data(dat, bb, config)
-#         imageio.imwrite("_".join(['imgs_/image', spill, dat]) + '.jpg', image)
-
 
 if __name__ == '__main__':
     for wildfire in parse_input_data()[1:]:
@@ -229,13 +216,3 @@ if __name__ == '__main__':
             imageio.imwrite("_".join(['data/fire_images/image', name, date]) + '.jpg', image)
 
 
-    # bb = get_bounding_box(39.810278, -121.437222)
-    # dat = '2018-11-16'
-    # interval_from = datetime.strptime(dat, '%Y-%m-%d') - timedelta(days=5)
-    # interval_to = datetime.strptime(dat, '%Y-%m-%d') + timedelta(days=30)
-    # available_dates = get_available_dates(bb, (interval_from, interval_to))
-    # print(available_dates)
-    # dat = available_dates[-1]
-    # # print(config)
-    # image = get_image_data('2018-11-16', bb, config)
-    # plot_image(image)
