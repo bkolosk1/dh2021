@@ -1,4 +1,6 @@
-from googlesearch import search 
+import sys
+
+from googlesearch import search
 from sumy.parsers.html import HtmlParser
 from sumy.parsers.plaintext import PlaintextParser
 from sumy.nlp.tokenizers import Tokenizer
@@ -6,6 +8,7 @@ from sumy.summarizers.lsa import LsaSummarizer as Summarizer
 from sumy.nlp.stemmers import Stemmer
 from sumy.utils import get_stop_words
 import os
+from ..utils import utilities
 import pickle
 import pandas as pd
 from tqdm import tqdm
@@ -29,20 +32,17 @@ def summarize_url(url):
         outs.append(str(sentence))
     return outs
 
-x = pd.read_csv('all_wildfires.csv')
-events = x['name'].to_list()
-print(events)
+def get_findings(events):
+    out = {}
+    for query in tqdm(events):
+        findings_ = []
+        out[query] = []
+        for j in search(query, num_results=10):
+            findings_ = findings_ + summarize_url(j)
+            out[query] = [] + [" ".join(list(set(findings_)))]
+    return out
 
-outs = {}
-for query in tqdm(events):
-    findings_ = []
-    outs[query] = []
-    #query = "MV Wakashio oil spill"
-    for j in search(query, num_results=10): 
-        findings_=findings_+summarize_url(j)
-        outs[query] = [] +  [" ".join(list(set(findings_)))]
-        #outs[query] = get_raw_doc(j)
-    print(outs[query])     
-
-with open("text_data.pkl", "wb") as f:
-    pickle.dump(outs, f)
+if __name__ == '__main__':
+    events = utilities.read_data(sys.argv[1])
+    summary = get_findings(events)
+    utilities.write_data_to_file(sys.argv[2], summary)
