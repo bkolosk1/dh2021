@@ -1,4 +1,4 @@
-# DRAGONHACK 2020
+# DRAGONHACK 2021
 
 ## Team `New_folder`
 - Boshko Koloski
@@ -32,13 +32,18 @@ pipenv install
 ## Usage 
 Open the UI/UX mockup located  [here](./mockups).
 
+## Initial data 
+
+The initial data of the wildfires is obtained from the Wikipedia [list of wildfires](https://en.wikipedia.org/wiki/List_of_wildfires).
+Since the table is incomplete and some key information were missing as exact coordinates, number of casualties and the cause of the incident, we have manually collected data as close as possible.
+The dataset consists out of set of wildfire incidents, it's exact location, area affected, the cause of the incident, as well as the number of casualties, homes and people evacuated in order to obtain the proportions of such and incident.
+
 ## Earth Observation Hack
 We use SINERGIZE's satellite imagery with a custom script for visualizing wildfires in order to collect the images before, during and after the incident has occured.
 For a given event, we scan the coordinates with a bounding box in order to collect the imagery in the interval of [start_day-10, end_day+30] and obtain a collection of unique satellite images of the specific wildfire.
 Additionaly, while acquiring the images, we scan for the satellite data on the available and non-cloudy dates in order to obtain high-quality images. 
 
-## BEST UX
-
-## BEST CARBON FOOTPRINT REDUCTION 
-## MOST USEFUL HACK
+## AUTOFACT
 ![Alt text](data/knowledge_graphs/diagram_readme.png?raw=true "Title")
+
+
