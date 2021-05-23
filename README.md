@@ -30,7 +30,7 @@ pipenv install
 ```
 
 ## Usage 
-Open the UI/UX mockup located  [here](./mockups).
+Open the UI/UX mockup [here](https://xd.adobe.com/view/9c231bef-a3fc-47d8-6a1f-9379443117ce-ea12/#)).
 
 ## Initial data 
 
