@@ -30,7 +30,8 @@ pipenv install
 ```
 
 ## Usage 
-Open the UI/UX mockup [here](https://xd.adobe.com/view/9c231bef-a3fc-47d8-6a1f-9379443117ce-ea12/#)).
+Various exploration techniques and knowledge graph extraction and creation is to be found in [jupyter notebooks](./src/back/notebooks) .
+Open the `UI/UX mockup` [here](https://xd.adobe.com/view/9c231bef-a3fc-47d8-6a1f-9379443117ce-ea12/#).
 
 ## Initial data 
 
@@ -45,5 +46,10 @@ Additionaly, while acquiring the images, we scan for the satellite data on the a
 
 ## AUTOFACT
 ![Alt text](data/knowledge_graphs/diagram_readme.png?raw=true "Title")
+
+#### Example of knowledge graphs automatically extracted with our tool
+![Alt text](data/knowlege_graph.png?raw=true "Title")
+
+
 
 
